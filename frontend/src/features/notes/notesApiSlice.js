@@ -8,9 +8,9 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				url: `${NOTES_URL}`,
 				method: "GET",
 				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+
 				},
 			}),
 		}),
@@ -20,9 +20,8 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				method: "POST",
 				body: data,
 				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
 				},
 			}),
 		}),
@@ -32,9 +31,8 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				method: "PUT",
 				body: data,
 				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
 				},
 			}),
 		}),
@@ -43,9 +41,8 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				url: `${NOTES_URL}`,
 				method: "DELETE",
 				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
 				},
 				body: data,
 			}),

@@ -9,9 +9,9 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				method: "POST",
 				body: data,
 				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Headers":
+						"Origin, X-Requested-With, Content-Type, Accept",
 				},
 			}),
 		}),
@@ -20,9 +20,9 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				url: `${USERS_URL}/logout`,
 				method: "POST",
 				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Headers":
+						"Origin, X-Requested-With, Content-Type, Accept",
 				},
 			}),
 		}),
@@ -32,9 +32,9 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				method: "POST",
 				body: data,
 				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Headers":
+						"Origin, X-Requested-With, Content-Type, Accept",
 				},
 			}),
 		}),
