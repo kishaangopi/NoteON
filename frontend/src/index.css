@@ -1,0 +1,1076 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: "Montserrat", sans-serif;
+}
+
+.note-app {
+	opacity: 1;
+	background-color: #f1f3f5;
+}
+/* -------------------------- */
+/* Sign in
+/* --------------------------- */
+.section-signin {
+	height: 100vh;
+	padding-top: 48px;
+	padding: 0 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.signin-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.signin-container img {
+	width: 50%;
+}
+
+.signin-content {
+	max-width: 600px;
+}
+
+.signin-form-container {
+	height: 100vh;
+	padding-top: 48px;
+	padding: 0 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.signin-form {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #292c35;
+	padding: 40px;
+	border-radius: 10px;
+}
+
+.signin-input {
+	padding: 8px;
+	font-size: 1.6rem;
+	border-radius: 5px;
+	width: 250px;
+	border: 2px black solid;
+	outline: none;
+}
+
+.button-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.signin-btn {
+	background-color: #6c63ff;
+	padding: 8px;
+	font-size: 1.6rem;
+	border-radius: 7px;
+	width: 250px;
+	color: white;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	transition: all 0.2s ease-in;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+		rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.signin-btn:hover {
+	transform: translateY(-5%);
+}
+
+.signin-content h1 {
+	font-size: 6.2rem;
+	margin-bottom: 20px;
+}
+.signin-content p {
+	font-size: 2rem;
+	line-height: 1.6;
+	margin-bottom: 25px;
+}
+
+/* -------------------------- */
+/* Section Header*/
+/* --------------------------- */
+
+.section-header {
+	padding: 1.6rem 3.2rem;
+	background-color: white;
+	margin: auto 0;
+	/* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.heading-primary {
+	font-size: 3rem;
+	font-family: "McLaren", cursive;
+}
+.container-header {
+	display: flex;
+	gap: 70px;
+	align-items: center;
+	margin-right: 40px;
+}
+
+.search-box {
+	width: fit-content;
+	height: fit-content;
+	position: relative;
+}
+.input-search {
+	height: 50px;
+	width: 50px;
+	border-style: none;
+	padding: 10px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	outline: none;
+	border-radius: 25px;
+	transition: all 0.5s ease-in-out;
+	background-color: black;
+	padding-right: 40px;
+}
+
+.input-search::placeholder {
+	color: rgba(0, 0, 0, 0.899);
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: 100;
+}
+.btn-search {
+	width: 50px;
+	height: 50px;
+	border-style: none;
+	font-size: 20px;
+	font-weight: bold;
+	outline: none;
+	cursor: pointer;
+	border-radius: 50%;
+	position: absolute;
+	right: 0px;
+	color: white;
+	background-color: transparent;
+	pointer-events: painted;
+}
+
+.btn-search:focus ~ .input-search {
+	width: 200px;
+	border-radius: 0px;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+.input-search:focus {
+	width: 200px;
+	border-radius: 0px;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	width: 40px;
+	height: 20px;
+	background-color: #111;
+	display: flex;
+	border-radius: 50px;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	transform: scale(1.5);
+	cursor: pointer;
+}
+
+.ball {
+	width: 14px;
+	height: 14px;
+	background-color: white;
+	position: absolute;
+	top: 2.4px;
+	left: 2px;
+	border-radius: 50%;
+	transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball {
+	transform: translateX(22px);
+}
+
+.fa-moon {
+	color: pink;
+}
+
+.fa-sun {
+	color: yellow;
+}
+
+/* --------------------- */
+/* INput section */
+/* ------------------------ */
+
+.container-input {
+	position: absolute;
+	left: 1.6rem;
+	top: 16rem;
+	z-index: 10;
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+	transition: all 0.5s ease-in-out;
+
+	scale: 0.4;
+}
+
+.--open-input.container-input {
+	display: block;
+	left: 10rem;
+	top: 10rem;
+	opacity: 1;
+	pointer-events: auto;
+	visibility: visible;
+	scale: 1;
+}
+
+.--open-input.container-input .input-box {
+	position: relative;
+	display: flex;
+	padding: 1.8rem;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 0 auto 4rem auto;
+	border-radius: 20px;
+	background-color: black;
+	width: 350px;
+	height: 250px;
+	gap: 1rem;
+}
+.input-box {
+	position: relative;
+	display: flex;
+	padding: 1.8rem;
+	flex-direction: column;
+	justify-content: space-around;
+	border-radius: 20px;
+	background-color: black;
+	height: 20px;
+	width: 20px;
+	transition: all 0.5s ease-in-out;
+}
+
+.--open-input.container-input .input-box .input-title {
+	padding: 0.8rem 3.2rem;
+	font-size: 2rem;
+	border-radius: 7px;
+	border: none;
+}
+
+.input-title {
+	border-radius: 7px;
+	border: none;
+	transition: all 0.5s ease-in-out;
+}
+
+.--open-input.container-input .input-box .input-note {
+	padding: 1.6rem 3.2rem;
+	resize: none;
+	font-size: 1.6rem;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	border-radius: 7px;
+	border: none;
+}
+.input-note {
+	border: none;
+	transition: all 0.5s ease-in-out;
+}
+.--open-input.container-input .input-box .input-add {
+	background-color: #6c63ff;
+	font-size: 3.2rem;
+	padding: 0.1rem 1rem;
+	border-radius: 40%;
+	border: none;
+	position: absolute;
+	bottom: 0;
+	right: 5.2rem;
+	transform: translateY(50%);
+	cursor: pointer;
+}
+.input-add {
+	background-color: black;
+	border-radius: 40%;
+	border: none;
+	position: absolute;
+	bottom: 0;
+	right: 5.2rem;
+	transform: translateY(50%);
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+
+/* ---------------------- */
+/* Sidebar */
+/* ----------------------- */
+
+.sidebar-notes {
+	display: flex;
+}
+
+.container-sidebar {
+	position: relative;
+	padding-top: 20px;
+	min-width: 65px;
+	height: 89.2vh;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+	/* box-shadow: 10px 0 10px -11px rgba(0, 0, 0, 0.3); */
+	border-radius: -25%;
+}
+
+.container-sidebar svg {
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+}
+
+/* ---------------- */
+/* Section Account */
+/* --------------------- */
+.account {
+	background-color: white;
+	padding-top: 32px;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	width: 0;
+	padding: 0;
+	scale: 1;
+	transition: width 0.3s ease-in, opacity 0.3s ease-in, visibility 0.3s ease-in,
+		padding 0.5s ease-in;
+}
+.--open-account.account {
+	padding: 20px;
+	width: 450px;
+	visibility: visible;
+	pointer-events: all;
+	opacity: 1;
+	scale: 1;
+}
+
+.account-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	border-bottom: 2px solid rgb(239, 237, 237);
+	padding-bottom: 40px;
+}
+.account-info {
+	font-size: 18px;
+}
+.account-info p {
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 1.1px;
+}
+
+.account-image {
+	height: 80px;
+	width: 80px;
+	border-radius: 100%;
+}
+
+.data {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 25px;
+}
+.data-item {
+	padding: 15px 0px;
+}
+.data-item p {
+	font-size: 12px;
+	color: gray;
+	margin-bottom: 5px;
+}
+.item-count {
+	display: flex;
+	align-items: center;
+}
+
+.count-color {
+	height: 20px;
+	width: 3.1px;
+	background-color: black;
+	border-radius: 20px;
+}
+
+.data-item div span {
+	margin-left: 20px;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.signout {
+	margin-top: 20px;
+	padding: 50px 20px 0 20px;
+	border-top: 2px solid rgb(239, 237, 237);
+}
+
+.signout p {
+	font-size: 1.4rem;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+
+.signout button {
+	width: 100%;
+	padding: 15px 30px;
+	border: none;
+	border-radius: 7px;
+	background-color: #6c63ff;
+	font-size: 1.8rem;
+	border: 2px solid rgb(239, 237, 237);
+	cursor: pointer;
+}
+/* ---------------- */
+/* Section Note */
+/* --------------------- */
+
+.notes-area {
+	width: 100%;
+	height: 88.9vh;
+	overflow-y: scroll;
+}
+
+.notes-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	padding: 3.2rem;
+	gap: 3.2rem;
+}
+
+.filter {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 20px 50px 0 20px;
+}
+
+.filter select {
+	padding: 10px 30px;
+	border-radius: 7px;
+	outline: none;
+	background-color: black;
+	color: whitesmoke;
+}
+
+.filter p {
+	margin-right: 60px;
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.note {
+	position: relative;
+	background-color: white;
+	height: 200px;
+	float: left;
+	padding: 2rem 2rem 3.6rem 2rem;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.note-title {
+	font-size: 2rem;
+	margin-bottom: 15px;
+}
+
+.note-content {
+	font-size: 1.6rem;
+	line-height: 1.6;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+.note-delete {
+	position: absolute;
+	border: none;
+	background-color: white;
+	padding: 0.5rem 0.8rem;
+	border-radius: 20px;
+	bottom: 2%;
+	right: 1%;
+	cursor: pointer;
+
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.5s;
+}
+
+.note-footer {
+	position: absolute;
+	bottom: 5%;
+	font-size: 1.2rem;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+}
+.note-date-time {
+	display: flex;
+	gap: 10px;
+	color: #333;
+}
+
+.note-star {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+}
+
+.note-progress {
+	border-radius: 5px;
+	outline: none;
+	margin-bottom: 2px;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+/*----------------------- media queries----------------------------------- -------------------------------*/
+/* ----------------------------------------------------------------------- ------------------------------*/
+@media (max-width: 38.5rem) {
+	/*----------------------------------------  */
+	/*--------------- header --------------------*/
+	/* --------------------------------------- */
+
+	.container-header {
+		margin-right: 1rem;
+		gap: 5rem;
+	}
+	.section-header {
+		padding: 2.7rem 2.5rem;
+	}
+
+	.heading-primary {
+		font-size: 2.4rem;
+		font-family: "McLaren", cursive;
+	}
+
+	.input-search {
+		height: 40px;
+		width: 40px;
+		border-style: none;
+		padding: 0px;
+		padding-right: 40px;
+	}
+	.input-search::placeholder {
+		font-size: 1.6rem;
+	}
+	.btn-search {
+		width: 40px;
+		height: 40px;
+	}
+	.btn-search:focus ~ .input-search {
+		width: 150px;
+	}
+	.input-search:focus {
+		width: 150px;
+	}
+
+	/*----------------------------------------  */
+	/*--------------- sidebar--------------------*/
+	/* --------------------------------------- */
+
+	.container-sidebar {
+		min-width: 80px;
+		gap: 40px;
+	}
+
+	.container-sidebar svg {
+		height: 35px;
+		width: 35px;
+	}
+
+	/*----------------------------------------  */
+	/*--------------- input --------------------*/
+	/* --------------------------------------- */
+	.container-input {
+		position: absolute;
+		left: 1.6rem;
+		top: 19rem;
+	}
+
+	.--open-input.container-input {
+		left: 10rem;
+		top: 14rem;
+	}
+
+	.--open-input.container-input .input-box {
+		padding: 1.4rem;
+		width: 300px;
+		height: 220px;
+	}
+
+	.--open-input.container-input .input-box .input-title {
+		padding: 0.8rem 2.5rem;
+		font-size: 1.6rem;
+		border-radius: 7px;
+		border: none;
+	}
+
+	.--open-input.container-input .input-box .input-note {
+		padding: 1.2rem 2.5rem;
+	}
+
+	.--open-input.container-input .input-box .input-add {
+		font-size: 2.6rem;
+	}
+
+	/*----------------------------------------  */
+	/*--------------- note --------------------*/
+	/* --------------------------------------- */
+	.note {
+		height: 200px;
+	}
+	.note-title {
+		font-size: 1.8rem;
+		margin-bottom: 10px;
+	}
+
+	.note-content {
+		font-size: 1.4rem;
+	}
+
+	.note-catagory {
+		padding: 8px;
+		font-size: 1rem;
+	}
+
+	.notes-container {
+		padding: 1.6rem;
+	}
+	.note-progress {
+		font-size: 1.2rem;
+	}
+	.filter {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin: 20px 50px 0 20px;
+	}
+
+	.filter select {
+		padding: 5px 30px;
+		font-size: 1.4rem;
+	}
+
+	.filter p {
+		font-size: 1.4rem;
+	}
+	/*----------------------------------------  */
+	/*--------------- Account --------------------*/
+	/* --------------------------------------- */
+	.account {
+		position: absolute;
+		right: 0;
+		top: 95px;
+		height: 88.8vh;
+	}
+	.--open-account.account {
+		position: absolute;
+		right: 0;
+		top: 95px;
+		height: 88.8vh;
+		width: 350px;
+	}
+}
+
+@media (max-width: 32rem) {
+	.section-header {
+		display: block;
+
+		padding: 0.5rem 1rem;
+	}
+	.container-header {
+		justify-content: space-between;
+	}
+	/*----------------------------------------  */
+	/*--------------- sidebar --------------------*/
+	/* --------------------------------------- */
+	.container-sidebar {
+		min-width: 60px;
+		gap: 40px;
+	}
+
+	.container-sidebar svg {
+		height: 35px;
+		width: 35px;
+	}
+
+	/*----------------------------------------  */
+	/*--------------- input --------------------*/
+	/* --------------------------------------- */
+
+	.--open-input.container-input {
+		left: 5rem;
+		top: 14rem;
+	}
+
+	.--open-input.container-input .input-box {
+		padding: 1.4rem;
+		width: 260px;
+		height: 200px;
+	}
+
+	.--open-input.container-input .input-box .input-add {
+		font-size: 2.8rem;
+	}
+
+	/*----------------------------------------  */
+	/*--------------- note --------------------*/
+	/* --------------------------------------- */
+	.note {
+		height: 180px;
+	}
+	.note-title {
+		font-size: 1.6rem;
+		margin-bottom: 5px;
+	}
+
+	.note-content {
+		font-size: 1.2rem;
+	}
+
+	.note-delete {
+		fill: #6c63ff;
+	}
+
+	.note-time-date {
+		position: absolute;
+		bottom: 5%;
+		font-size: 1rem;
+		width: 80%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.notes-container {
+		padding: 1rem;
+		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	}
+	.bin {
+		font-size: 12px;
+	}
+
+	.note-progress {
+		font-size: 1rem;
+	}
+	.filter {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 10px;
+		margin: 20px 50px 0 20px;
+	}
+
+	/*----------------------------------------  */
+	/*--------------- Account --------------------*/
+	/* --------------------------------------- */
+	.account {
+		position: absolute;
+		right: 0;
+		top: 95px;
+		height: 88.8vh;
+	}
+	.--open-account.account {
+		position: absolute;
+		right: 0;
+		top: 85px;
+		height: 88.8vh;
+		width: 250px;
+	}
+	.account-header {
+		display: block;
+	}
+	.account-info {
+		font-size: 15px;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	.account-image {
+		display: block;
+		margin: 1px auto;
+	}
+
+	.data-item div span {
+		font-size: 20px;
+	}
+	.signout {
+		margin-top: 20px;
+		padding: 20px 20px 0 20px;
+		border-top: 2px solid rgb(239, 237, 237);
+	}
+
+	.signout p {
+		font-size: 1.4rem;
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+
+	.signout button {
+		padding: 7px 14px;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 69.3rem) {
+	.section-signin {
+		padding: 0 50px;
+	}
+
+	.signin-btn img {
+		height: 50px;
+		width: 50px;
+	}
+
+	.signin-btn {
+		margin: 0 auto;
+		font-size: 1.4rem;
+		width: 55%;
+	}
+
+	.signin-content {
+		max-width: 600px;
+	}
+
+	.signin-content h1 {
+		font-size: 4.8rem;
+		margin-bottom: 20px;
+	}
+	.signin-content p {
+		font-size: 1.8rem;
+		line-height: 1.4;
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 61.25rem) {
+	.signin-btn img {
+		height: 50px;
+		width: 50px;
+	}
+
+	.signin-btn {
+		margin: 0 auto;
+		font-size: 1.4rem;
+		width: 75%;
+	}
+
+	.signin-content {
+		max-width: 500px;
+	}
+
+	.signin-content h1 {
+		font-size: 3.6rem;
+		margin-bottom: 20px;
+	}
+	.signin-content p {
+		font-size: 1.4rem;
+		line-height: 1.4;
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 56.25rem) {
+	.section-signin {
+		padding: 0 10px;
+	}
+	.signin-container {
+		display: block;
+	}
+
+	.signin-btn img {
+		height: 50px;
+		width: 50px;
+	}
+
+	.signin-btn {
+		margin: 0 auto;
+		font-size: 1.4rem;
+		width: 50%;
+	}
+
+	.signin-content {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 45rem) {
+	.signin-btn img {
+		height: 50px;
+		width: 50px;
+	}
+
+	.signin-btn {
+		margin: 0 auto;
+		font-size: 1.4rem;
+		width: 60%;
+	}
+
+	.signin-content {
+		max-width: 400px;
+		margin: 0 auto;
+	}
+
+	.signin-content h1 {
+		font-size: 3rem;
+		margin-bottom: 20px;
+	}
+	.signin-content p {
+		font-size: 1.4rem;
+		line-height: 1.4;
+		margin-bottom: 25px;
+	}
+}
+@media (max-width: 37.2rem) {
+	.signin-content {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	.signin-btn img {
+		height: 40px;
+		width: 40px;
+	}
+
+	.signin-btn {
+		margin: 0 auto;
+		font-size: 1.4rem;
+		width: 70%;
+	}
+
+	.signin-content h1 {
+		font-size: 2rem;
+		margin-bottom: 20px;
+	}
+	.signin-content p {
+		font-size: 1.2rem;
+		line-height: 1.4;
+		margin-bottom: 25px;
+	}
+}
+
+/*--------------------------------------------------------- */
+/* ------------DARK MODE------------------------------------ */
+/* --------------------------------------------------------- */
+
+/* section header */
+.section-header.dark {
+	background-color: #292c35;
+	color: whitesmoke;
+	transition: all 0.2s ease-in;
+}
+.dark .input-search::placeholder {
+	color: rgba(255, 255, 255, 0.899);
+}
+.dark .input-search {
+	color: whitesmoke;
+}
+
+/* section sidebar */
+.container-sidebar.dark {
+	background-color: #292c35;
+	transition: all 0.2s ease-in;
+}
+.dark svg {
+	stroke: whitesmoke;
+}
+
+/* section account */
+.account.dark {
+	background-color: #292c35;
+	transition: width 0.3s ease-in, opacity 0.3s ease-in, visibility 0.3s ease-in,
+		padding 0.5s ease-in, background-color 0.2s ease-in;
+}
+
+.dark .count-color {
+	background-color: #6c63ff;
+}
+.dark .item-count {
+	color: whitesmoke;
+}
+.dark .account-info {
+	color: whitesmoke;
+}
+.dark .signout p {
+	color: whitesmoke;
+}
+
+/* note */
+.dark.notes-area {
+	background-color: #1a1a1a;
+	transition: all 0.2s ease-in;
+}
+.dark .filter p {
+	color: whitesmoke;
+	transition: all 0.2s ease-in;
+}
+.dark .note {
+	background-color: #292c35;
+	transition: all 0.2s ease-in;
+}
+.dark .note-title {
+	color: whitesmoke;
+	transition: all 0.2s ease-in;
+}
+.dark .note-content {
+	color: whitesmoke;
+}
+.dark .note-date-time {
+	color: rgb(215, 212, 212);
+}
+
+/* scrollbar */
+.notes-area::-webkit-scrollbar {
+	background-color: transparent;
+	width: 10px;
+}
+.notes-area::-webkit-scrollbar-thumb {
+	background-color: black;
+	border-radius: 10px;
+}
+.dark.notes-area::-webkit-scrollbar-thumb {
+	background-color: whitesmoke;
+	border-radius: 10px;
+}

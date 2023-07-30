@@ -1,0 +1,46 @@
+// const pusher = new Pusher({
+// 	appId: "1523724",
+// 	key: "4ecbc0a745e9cb32a1ff",
+// 	secret: "2e360057a9638f648f61",
+// 	cluster: "ap2",
+// 	useTLS: true,
+// });
+// mongoose.set("strictQuery", true);
+
+// const db = mongoose.connection;
+// db.once("open", () => {
+// 	console.log("DB connected");
+
+// 	const notesCollection = db.collection("notescontent");
+// 	const changeStream = notesCollection.watch();
+
+// 	changeStream.on("change", (change) => {
+// 		console.log(change);
+// 	});
+// });
+
+// app.get("/", (req, res) => {
+// 	res.send("Hello World");
+// });
+
+// app.get("/notes/sync", (req, res) => {
+// 	notes.find((err, data) => {
+// 		if (err) {
+// 			res.status(500).send(err);
+// 		} else {
+// 			res.status(200).send(data);
+// 		}
+// 	});
+// });
+
+// app.post("/notes/new", (req, res) => {
+// 	const dbNote = req.body;
+
+// 	notes.create(dbNote, (err, data) => {
+// 		if (err) {
+// 			res.status(500).send(err);
+// 		} else {
+// 			res.status(201).send(`new note created ${data}`);
+// 		}
+// 	});
+// });
