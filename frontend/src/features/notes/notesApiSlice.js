@@ -10,7 +10,7 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				headers: {
 					"Content-Type": "application/json",
 
-					Accept: "application/json",
+					"Access-Control-Allow-Credentials": "true",
 					"Access-Control-Allow-Origin": "*",
 				},
 				mode: "no-cors",
@@ -23,7 +23,7 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				body: data,
 				headers: {
 					"Content-Type": "application/json",
-					Accept: "application/json",
+					"Access-Control-Allow-Credentials": "true",
 					"Access-Control-Allow-Origin": "*",
 				},
 				mode: "no-cors",
@@ -36,7 +36,7 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				body: data,
 				headers: {
 					"Content-Type": "application/json",
-					Accept: "application/json",
+					"Access-Control-Allow-Credentials": "true",
 					"Access-Control-Allow-Origin": "*",
 				},
 				mode: "no-cors",
@@ -48,8 +48,8 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				method: "DELETE",
 				headers: {
 					"Content-Type": "application/json",
-					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Credentials": "true",
 				},
 				mode: "no-cors",
 				body: data,

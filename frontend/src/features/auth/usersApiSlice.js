@@ -10,7 +10,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				body: data,
 				headers: {
 					"Content-Type": "application/json",
-					Accept: "application/json",
+					"Access-Control-Allow-Credentials": "true",
 					"Access-Control-Allow-Origin": "*",
 				},
 				mode: "no-cors",
@@ -22,7 +22,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
-					Accept: "application/json",
+					"Access-Control-Allow-Credentials": "true",
 					"Access-Control-Allow-Origin": "*",
 				},
 				mode: "no-cors",
@@ -35,7 +35,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				body: data,
 				headers: {
 					"Content-Type": "application/json",
-					Accept: "application/json",
+					"Access-Control-Allow-Credentials": "true",
 					"Access-Control-Allow-Origin": "*",
 				},
 				mode: "no-cors",
