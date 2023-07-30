@@ -9,6 +9,8 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				method: "POST",
 				body: data,
 				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
 				},
 				mode: "no-cors",
@@ -19,6 +21,8 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				url: `${USERS_URL}/logout`,
 				method: "POST",
 				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
 				},
 				mode: "no-cors",
@@ -30,6 +34,8 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				method: "POST",
 				body: data,
 				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
 					"Access-Control-Allow-Origin": "*",
 				},
 				mode: "no-cors",
