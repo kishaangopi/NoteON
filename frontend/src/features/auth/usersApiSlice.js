@@ -7,7 +7,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 			query: (data) => ({
 				url: `${USERS_URL}/login`,
 				method: "POST",
-				body: data,
+				body: JSON.stringify(data),
 				headers: {
 					"Content-Type": "application/json",
 					"Access-Control-Allow-Credentials": "true",
@@ -32,7 +32,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 			query: (data) => ({
 				url: `${USERS_URL}`,
 				method: "POST",
-				body: data,
+				body: JSON.stringify(data),
 				headers: {
 					"Content-Type": "application/json",
 					"Access-Control-Allow-Credentials": "true",
