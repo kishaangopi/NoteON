@@ -7,6 +7,11 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 			query: () => ({
 				url: `${NOTES_URL}`,
 				method: "GET",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+					"Access-Control-Allow-Origin": "*",
+				},
 			}),
 		}),
 		createNotes: builder.mutation({
@@ -14,6 +19,11 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				url: `${NOTES_URL}`,
 				method: "POST",
 				body: data,
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+					"Access-Control-Allow-Origin": "*",
+				},
 			}),
 		}),
 		updateNotes: builder.mutation({
@@ -21,12 +31,22 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				url: `${NOTES_URL}`,
 				method: "PUT",
 				body: data,
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+					"Access-Control-Allow-Origin": "*",
+				},
 			}),
 		}),
 		deleteNotes: builder.mutation({
 			query: (data) => ({
 				url: `${NOTES_URL}`,
 				method: "DELETE",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+					"Access-Control-Allow-Origin": "*",
+				},
 				body: data,
 			}),
 		}),
