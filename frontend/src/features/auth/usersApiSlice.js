@@ -10,9 +10,8 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				body: data,
 				headers: {
 					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Headers":
-						"Origin, X-Requested-With, Content-Type, Accept",
 				},
+				mode: "no-cors",
 			}),
 		}),
 		logout: builder.mutation({
@@ -21,9 +20,8 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				method: "POST",
 				headers: {
 					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Headers":
-						"Origin, X-Requested-With, Content-Type, Accept",
 				},
+				mode: "no-cors",
 			}),
 		}),
 		register: builder.mutation({
@@ -33,9 +31,8 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				body: data,
 				headers: {
 					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Headers":
-						"Origin, X-Requested-With, Content-Type, Accept",
 				},
+				mode: "no-cors",
 			}),
 		}),
 	}),

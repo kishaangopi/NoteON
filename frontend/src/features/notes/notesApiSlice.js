@@ -9,9 +9,8 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				method: "GET",
 				headers: {
 					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-
 				},
+				mode: "no-cors",
 			}),
 		}),
 		createNotes: builder.mutation({
@@ -21,8 +20,8 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				body: data,
 				headers: {
 					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
 				},
+				mode: "no-cors",
 			}),
 		}),
 		updateNotes: builder.mutation({
@@ -32,8 +31,8 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				body: data,
 				headers: {
 					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
 				},
+				mode: "no-cors",
 			}),
 		}),
 		deleteNotes: builder.mutation({
@@ -42,8 +41,8 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 				method: "DELETE",
 				headers: {
 					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
 				},
+				mode: "no-cors",
 				body: data,
 			}),
 		}),
