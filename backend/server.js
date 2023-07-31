@@ -8,7 +8,6 @@ const app = express();
 const corsOPtions = require("./config/corsOptions");
 const cookieParser = require("cookie-parser");
 const connectDB = require("./config/dbConnection");
-const middleware = require("./middleware/authMiddleware");
 
 const port = process.env.PORT || 9000;
 
