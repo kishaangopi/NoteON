@@ -8,12 +8,6 @@ export const usersApiSlice = apiSlice.injectEndpoints({
 				url: `${USERS_URL}/login`,
 				method: "POST",
 				body: data,
-				headers: {
-					"Content-Type": "application/json",
-					"Access-Control-Allow-Credentials": "true",
-					"Access-Control-Allow-Origin": "*",
-				},
-				mode: "no-cors",
 			}),
 		}),
 		logout: builder.mutation({
