@@ -7,8 +7,6 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 			query: () => ({
 				url: `${NOTES_URL}`,
 				method: "GET",
-
-				mode: "no-cors",
 			}),
 		}),
 		createNotes: builder.mutation({
@@ -29,7 +27,6 @@ export const notesApiSlice = apiSlice.injectEndpoints({
 			query: (data) => ({
 				url: `${NOTES_URL}`,
 				method: "DELETE",
-
 				body: data,
 			}),
 		}),
