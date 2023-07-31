@@ -21,6 +21,7 @@ const SignIn = () => {
 			...prev,
 			[e.target.name]: e.target.value,
 		}));
+		console.log(signin);
 	};
 
 	const [login, { isLoading }] = useLoginMutation();
@@ -43,6 +44,8 @@ const SignIn = () => {
 		e.preventDefault();
 		try {
 			const res = await login({ ...signin }).unwrap();
+			console.log(signin);
+			console.log(res);
 			diaptach(setCredientials({ ...res }));
 			navigate("/notes");
 		} catch (err) {
