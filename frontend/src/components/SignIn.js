@@ -43,9 +43,7 @@ const SignIn = () => {
 	const handlesignin = async (e) => {
 		e.preventDefault();
 		try {
-			console.log(signin);
 			const res = await login({ ...signin }).unwrap();
-			console.log(res);
 			diaptach(setCredientials({ ...res }));
 			navigate("/notes");
 		} catch (err) {
