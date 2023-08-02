@@ -21,7 +21,6 @@ const SignIn = () => {
 			...prev,
 			[e.target.name]: e.target.value,
 		}));
-		console.log(signin);
 	};
 
 	const [login, { isLoading }] = useLoginMutation();
