@@ -9,7 +9,6 @@ const generateToken = (res, id) => {
 		secure: true,
 		sameSite: "strict",
 		maxAge: 30 * 24 * 60 * 60 * 1000,
-		domain: ".vercel.app",
 	});
 };
 
